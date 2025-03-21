@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Menú Paraíso </title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Menú Restaurante</title>
+
+    <style>
+
+        body {
+
+            font-family: Arial, sans-serif;
+
+            background-color: #000; /* Fondo negro */
+
+            color: #fff; /* Texto blanco */
+
+            margin: 0;
+
+            padding: 0;
+
+        }
+
+        header {
+
+            text-align: center;
+
+            padding: 20px;
+
+            background-color: #333; /* Fondo gris oscuro */
+
+            border-bottom: 5px solid #FFD700; /* Línea decorativa amarilla */
+
+        }
+
+        .logo {
+
+            text-align: center;
+
+            margin-bottom: 10px;
+
+        }
+
+        .logo img {
+
+            width: 150px;
+
+            height: auto;
+
+        }
+
+        .social-links {
+
+            text-align: center;
+
+            margin-bottom: 10px;
+
+        }
+
+        .social-links a {
+
+            color: #FFD700; /* Enlaces amarillos */
+
+            text-decoration: none;
+
+            margin: 0 10px;
+
+            font-size: 0.9em;
+
+        }
+
+        .social-links a:hover {
+
+            color: #fff; /* Blanco al pasar el cursor */
+
+        }
+
+        nav {
+
+            text-align: center;
+
+            margin: 20px 0;
+
+        }
+
+        nav button {
+
+            background-color: #FFD700; /* Botones amarillos */
+
+            color: #000; /* Texto negro */
+
+            padding: 10px 20px;
+
+            border: none;
+
+            margin: 5px;
+
+            cursor: pointer;
+
+            font-size: 1em;
+
+            border-radius: 5px;
+
+        }
+
+        nav button:hover {
+
+            background-color: #fff; /* Blanco al pasar el cursor */
+
+            color: #000;
+
+        }
+
+        section {
+
+            display: none;
+
+            padding: 20px;
+
+        }
+
+        section.active {
+
+            display: block;
+
+        }
+
+        table {
+
+            width: 100%;
+
+            border-collapse: collapse;
+
+        }
+
+        th, td {
+
+            border: 1px solid #FFD700; /* Bordes amarillos */
+
+            padding: 10px;
+
+            text-align: left;
+
+        }
+
+        th {
+
+            background-color: #333; /* Fondo gris oscuro */
+
+            color: #FFD700; /* Texto amarillo */
+
+        }
+
+        td {
+
+            background-color: #111; /* Fondo negro */
+
+        }
+
+        footer {
+
+            text-align: center;
+
+            padding: 20px;
+
+            background-color: #333; /* Fondo gris oscuro */
+
+            color: #FFD700; /* Texto amarillo */
+
+            font-size: 0.8em;
+
+        }
+
+        footer a {
+
+            color: #FFD700; /* Amarillo */
+
+            text-decoration: none;
+
+        }
+
+        footer a:hover {
+
+            color: #fff; /* Blanco al pasar el cursor */
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo">
+
+            <img src= https://files.fm/u/fqaqs9dyem alt="Logo del Restaurante">
+
+        </div>
+
+        <h1>Menú del Paraíso</h1>
+
+        <div class="social-links">
+
+            <a href="https://www.facebook.com/share/18fGdx9JRa/?mibextid=wwXIfr" target="_blank">Facebook</a>
+
+            <a href="https://www.instagram.com/cafeteria_paraiso_del_sabor?igsh=MW50eXRuZWd4cG5qcA%3D%3D&utm_source=qr" target="_blank">Instagram</a>
+
+        </div>
+
+    </header>
+
+    <nav>
+
+        <button onclick="showSection('entrantes')">Entrantes</button>
+
+        <button onclick="showSection('pizzas')">Pizzas</button>
+
+        <button onclick="showSection('arroz')">Arroz</button>
+
+        <button onclick="showSection('bebidas')">Bebidas</button>
+
+    </nav>
+
+    <section id="entrantes" class="active">
+
+        <h2>Entrantes</h2>
+
+        <table>
+
+            <tr><th>Plato</th><th>Precio (CUP)</th></tr>
+
+            <tr><td>Chicharrita</td><td>250</td></tr>
+
+            <tr><td>Ensalada mixta</td><td>350</td></tr>
+
+            <tr><td>Tostones</td><td>400</td></tr>
+
+            <tr><td>Queso</td><td>400</td></tr>
+
+            <tr><td>Croquetas buffet</td><td>450</td></tr>
+
+            <tr><td>Papas fritas</td><td>500</td></tr>
+
+            <tr><td>Salchicha</td><td>500</td></tr>
+
+            <tr><td>Jamón</td><td>600</td></tr>
+
+            <tr><td>Ensalada fría</td><td>400</td></tr>
+
+            <tr><td>Titanic</td><td>1300</td></tr>
+
+            <tr><td>Pollo frito entero con Chicharrita</td><td>1200</td></tr>
+
+            <tr><td>Pollo frito entero con papas fritas</td><td>1300</td></tr>
+
+        </table>
+
+    </section>
+
+    <section id="pizzas">
+
+        <h2>Pizzas</h2>
+
+        <table>
+
+            <tr><th>Tipo</th><th>Precio (CUP)</th></tr>
+
+            <tr><td>Ají</td><td>125</td></tr>
+
+            <tr><td>Cebolla</td><td>125</td></tr>
+
+            <tr><td>Jamón</td><td>150</td></tr>
+
+            <tr><td>Salchicha</td><td>150</td></tr>
+
+            <tr><td>Chorizo</td><td>150</td></tr>
+
+            <tr><td>Beicon</td><td>350</td></tr>
+
+            <tr><td>Atún</td><td>350</td></tr>
+
+        </table>
+
+    </section>
+
+    <section id="arroz">
+
+        <h2>Arroz</h2>
+
+        <table>
+
+            <tr><th>Tipo</th><th>Agregados</th><th>Precio (CUP)</th></tr>
+
+            <tr><td>Congris o Amarillo con carne</td><td>Pollo frito, ensalada y chicharrita</td><td>1600</td></tr>
+
+            <tr><td>Congris o Amarillo con carne</td><td>Bistec de pollo, ensalada y chicharrita</td><td>1600</td></tr>
+
+            <tr><td>Congris o Amarillo con carne</td><td>Lomo ahumado, ensalada y chicharrita</td><td>1700</td></tr>
+
+            <tr><td>Congris o Amarillo con carne</td><td>Estofado de res, ensalada y chicharrita</td><td>1800</td></tr>
+
+            <tr><td>Congris o Amarillo con carne</td><td>Masa frita</td><td>1800</td></tr>
+
+            <tr><td>Congris o Amarillo con carne</td><td>Bistec de cerdo asado</td><td>1600</td></tr>
+
+        </table>
+
+    </section>
+
+    <section id="bebidas">
+
+        <h2>Bebidas</h2>
+
+        <table>
+
+            <tr><th>Bebida</th><th>Precio (CUP)</th></tr>
+
+            <tr><td>Agua</td><td>120</td></tr>
+
+            <tr><td>Jugo</td><td>180</td></tr>
+
+            <tr><td>Refresco de lata</td><td>200</td></tr>
+
+            <tr><td>Malta</td><td>250</td></tr>
+
+            <tr><td>Bebida energética</td><td>250</td></tr>
+
+            <tr><td>Cerveza importada</td><td>200</td></tr>
+
+            <tr><td>Cerveza nacional</td><td>250</td></tr>
+
+        </table>
+
+    </section>
+
+    <footer>
+
+        <p>Hecho por Helsing Raidel Pascual Pérez | Correo: <a href="mailto:helsingrpp2@gmail.com">helsingrpp2@gmail.com</a> | Teléfono: <a href="tel:+5355015233">+53 55015233</a></p>
+
+    </footer>
+
+    <script>
+
+        function showSection(id) {
+
+            const sections = document.querySelectorAll('section');
+
+            sections.forEach(section => section.classList.remove('active'));
+
+            document.getElementById(id).classList.add('active');
+
+        }
+
+    </script>
+
+</body>
+
+</html[43dcd9a7-70db-4a1f-b0ae-981daa162054](https://github.com/la9una/web/tree/ba1073ae044ebb7b538a3b13f0f9598f7c410bb6/docs%2Fbootstrap%2Falignci.md?citationMarker=43dcd9a7-70db-4a1f-b0ae-981daa162054 "1")[43dcd9a7-70db-4a1f-b0ae-981daa162054](https://github.com/CLONATORE/markdowns/tree/82cfb03683ceb807a7091de48045e6a7485acd72/webpack.md?citationMarker=43dcd9a7-70db-4a1f-b0ae-981daa162054 "2")
+<!-- partial -->
+  
+</body>
+</html>
