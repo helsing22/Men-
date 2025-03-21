@@ -8,15 +8,15 @@
     <style>
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: #f4f4f4; /* Fondo gris claro */
-            color: #333; /* Texto oscuro */
+            background-color: #1a1a1a; /* Fondo oscuro */
+            color: #e0e0e0; /* Texto claro */
             margin: 0;
             padding: 0;
         }
         header {
             text-align: center;
             padding: 20px;
-            background-color: #444; /* Fondo gris oscuro */
+            background-color: #333; /* Fondo gris oscuro */
             border-bottom: 5px solid #FFD700; /* Línea decorativa amarilla */
             animation: fadeIn 1s ease-in-out;
         }
@@ -75,18 +75,18 @@
             border-radius: 10px; /* Bordes redondeados */
         }
         th {
-            background-color: #333; /* Fondo gris oscuro */
+            background-color: #444; /* Fondo gris oscuro */
             color: #FFD700; /* Texto amarillo */
         }
         td {
-            background-color: #fff; /* Fondo blanco */
-            color: #333; /* Texto oscuro */
+            background-color: #222; /* Fondo más oscuro */
+            color: #e0e0e0; /* Texto claro */
             box-shadow: 0 0 10px rgba(255, 215, 0, 0.5); /* Bordes difusos */
         }
         footer {
             text-align: center;
             padding: 20px;
-            background-color: #444; /* Fondo gris oscuro */
+            background-color: #333; /* Fondo gris oscuro */
             color: #FFD700; /* Texto amarillo */
             font-size: 0.8em;
             animation: fadeIn 1s ease-in-out;
@@ -126,7 +126,7 @@
     <nav>
         <button onclick="showSection('entrantes')">Entrantes</button>
         <button onclick="showSection('pizzas')">Pizzas</button>
-        <button onclick="showSection('arroz')">Arroz</button>
+        <button onclick="showSection('comidas')">Comidas</button>
         <button onclick="showSection('bebidas')">Bebidas</button>
     </nav>
     <section id="entrantes" class="active">
@@ -160,10 +160,39 @@
             <tr><td>Atún</td><td>350</td></tr>
         </table>
     </section>
-    <section id="arroz">
-        <h2>Arroz</h2>
+    <section id="comidas">
+        <h2>Comidas</h2>
         <table>
             <tr><th>Tipo</th><th>Agregados</th><th>Precio (CUP)</th></tr>
             <tr><td>Congris o Amarillo con carne</td><td>Pollo frito, ensalada y chicharrita</td><td>1600</td></tr>
             <tr><td>Congris o Amarillo con carne</td><td>Bistec de pollo, ensalada y chicharrita</td><td>1600</td></tr>
-            <tr><td>Congris o Amarillo con carne</td><td>Lomo ahumado, ensalada y chicharrita</td
+            <tr><td>Congris o Amarillo con carne</td><td>Lomo ahumado, ensalada y chicharrita</td><td>1700</td></tr>
+            <tr><td>Congris o Amarillo con carne</td><td>Estofado de res, ensalada y chicharrita</td><td>1800</td></tr>
+            <tr><td>Congris o Amarillo con carne</td><td>Masa frita</td><td>1800</td></tr>
+            <tr><td>Congris o Amarillo con carne</td><td>Bistec de cerdo asado</td><td>1600</td></tr>
+        </table>
+    </section>
+    <section id="bebidas">
+        <h2>Bebidas</h2>
+        <table>
+            <tr><th>Bebida</th><th>Precio (CUP)</th></tr>
+            <tr><td>Agua</td><td>120</td></tr>
+            <tr><td>Jugo</td><td>180</td></tr>
+            <tr><td>Refresco de lata</td><td>200</td></tr>
+        </table>
+    </section>
+    <footer>
+        <p>&copy; 2023 Restaurante. Todos los derechos reservados.</p>
+        <p><a href="#">Política de privacidad</a> | <a href="#">Términos de servicio</a></p>
+    </footer>
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
