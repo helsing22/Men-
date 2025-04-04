@@ -42,6 +42,11 @@ header {
     text-align: center;
 }
 
+.cta {
+    text-align: center; /* Centra el contenido dentro de la sección */
+    margin: 20px 0; /* Espaciado superior e inferior */
+}
+
 .cta .button {
     display: inline-block;
     background-color: #ffcc00; /* Botón amarillo */
