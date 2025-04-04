@@ -12,10 +12,11 @@ header {
     background-color: #333; /* Color de fondo del encabezado */
 }
 
-.logo {
-    width: 150px; /* Ajusta el tamaño del logo */
-}
-
+.logo img {
+            width: 150px;
+            height: auto;
+            border-radius: 50%; /* Logo circular */
+            box-shadow: 0 0 15px 5px rgba(255, 215, 0, 0.7); /* Sombra amarilla */
 .social-icons {
     margin-top: 10px;
 }
