@@ -3,104 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paraíso de Sabores - Restaurante y Cafetería</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            background-color: #fff200; /* Amarillo de fondo */
-            color: #000; /* Texto negro */
-            transition: background-color 0.5s ease;
-        }
-
-        header {
-            background-color: #000; /* Negro de fondo */
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        nav {
-            text-align: center;
-            margin: 20px 0;
-        }
-
-        nav a {
-            background-color: #000; /* Botón negro */
-            color: #fff; /* Texto blanco */
-            padding: 15px 30px;
-            text-decoration: none;
-            font-size: 20px;
-            border-radius: 25px; /* Bordes redondeados */
-            transition: background-color 0.3s ease, transform 0.3s ease;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        nav a:hover {
-            background-color: #fff200; /* Botón amarillo al pasar el cursor */
-            color: #000; /* Texto negro */
-            transform: scale(1.05); /* Efecto de aumento */
-        }
-
-        nav a:active {
-            background-color: #fff; /* Fondo blanco al hacer clic */
-            color: #000; /* Texto negro */
-            transition: background-color 0.2s ease;
-        }
-
-        main {
-            padding: 40px;
-            text-align: center;
-            animation: fadeIn 1s ease-in;
-        }
-
-        footer {
-            background-color: #000; /* Negro de fondo */
-            color: #fff;
-            text-align: center;
-            padding: 15px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        .description {
-            font-size: 18px;
-            margin: 20px 0;
-            line-height: 1.6;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-    </style>
+    <title>Paraíso del Sabor</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
-        <h1>Bienvenido a Paraíso de Sabores</h1>
+        <h1>Paraíso del Sabor</h1>
+        <img src="logo.png" alt="Logotipo de Paraíso del Sabor" class="logo"> <!-- Asegúrate de tener un logo -->
+        <div class="social-icons">
+            <a href="https://www.instagram.com/tu_perfil" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/tu_perfil" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="mailto:tu_correo@ejemplo.com"><i class="fas fa-envelope"></i></a>
+        </div>
     </header>
+    
     <main>
-        <p class="description">
-            En Paraíso de Sabores, te invitamos a disfrutar de una experiencia gastronómica única. 
-            Nuestra especialidad es ofrecer una fusión de sabores que deleitarán tu paladar. 
-            Desde el café más exquisito hasta platos creativos que combinan ingredientes frescos y de alta calidad, 
-            cada bocado es un viaje a un mundo de sensaciones. 
-            Ven y descubre un ambiente acogedor y elegante, ideal para compartir momentos inolvidables con amigos y familiares.
-        </p>
-        <p>
-            ¡Haz clic en el botón de abajo para ver nuestro menú!
-        </p>
-        <nav>
-            <a href="https://helsing22.github.io/Men-/src/index.html">Ver Menú</a>
-        </nav>
+        <section class="description">
+            <p>Ubicado en Cartagena, Paraíso del Sabor es un ambiente tranquilo y sereno, ideal para disfrutar con familia, amigos o tu pareja. Ven y descubre un lugar donde cada sorbo y cada bocado son una experiencia única.</p>
+        </section>
+
+        <section class="cta">
+            <a href="menu.html" class="button">Ver Menú</a>
+            <a href="tel:+1234567890" class="icon"><i class="fas fa-phone"></i></a> <!-- Cambia el número de teléfono -->
+        </section>
+
+        <section class="images">
+            <h2>Nuestras Bebidas</h2>
+            <img src="bebidas.jpg" alt="Bebidas" class="image">
+            <h2>El Local</h2>
+            <img src="local.jpg" alt="Local" class="image">
+            <h2>Nuestras Comidas</h2>
+            <img src="comidas.jpg" alt="Comidas" class="image">
+        </section>
     </main>
+
     <footer>
-        <p>&copy; 2025 Paraíso de Sabores. Todos los derechos reservados.</p>
+        <p>&copy; 2025 Paraíso del Sabor. Todos los derechos reservados.</p>
     </footer>
 </body>
 </html>
