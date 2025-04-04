@@ -48,6 +48,7 @@ header {
 }
 
 .cta .button {
+    text-align: center;
     display: inline-block;
     background-color: #ffcc00; /* Botón amarillo */
     color: #1a1a1a; /* Texto del botón oscuro */
