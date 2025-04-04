@@ -13,10 +13,11 @@ header {
 }
 
 .logo img {
-            width: 150px;
+            width: 15px;
             height: auto;
             border-radius: 50%; /* Logo circular */
             box-shadow: 0 0 15px 5px rgba(255, 215, 0, 0.7); /* Sombra amarilla */
+}
 .social-icons {
     margin-top: 10px;
 }
