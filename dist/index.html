@@ -9,20 +9,21 @@
     <style>
         /* Estilos CSS para centrar y ajustar el contenido */
         body {
-    background-color: #1a1a1a; /* Fondo oscuro */
-    color: white; /* Texto blanco */
-    font-family: 'Arial', sans-serif; /* Fuente moderna */
-    margin: 0;
-    padding: 0;
+            background-color: #1a1a1a; /* Fondo oscuro */
+            color: white; /* Texto blanco */
+            font-family: 'Arial', sans-serif; /* Fuente moderna */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Centrar el contenido horizontalmente */
+            text-align: center; /* Centrar el texto */
         }
-
         header {
-    background-color: #333; /* Fondo del encabezado */
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            background-color: #444; /* Fondo del encabezado */
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
         }
-
         .logo {
             width: 150px; /* Ajusta el tamaño del logo según sea necesario */
             height: 150px; /* Asegúrate de que el logo sea cuadrado */
@@ -31,69 +32,60 @@
             box-shadow: 0 0 20px rgba(255, 204, 0, 0.7); /* Sombra difusa amarilla */
             transition: border 0.3s, box-shadow 0.3s; /* Transiciones suaves */
         }
-
         .logo:hover {
             border: 5px solid rgba(255, 204, 0, 1); /* Borde brillante al pasar el mouse */
             box-shadow: 0 0 30px rgba(255, 204, 0, 1); /* Sombra más intensa al pasar el mouse */
         }
-
         .social-icons a {
             color: white; /* Iconos en blanco */
             margin: 0 10px;
             transition: color 0.3s;
         }
-
         .social-icons a:hover {
             color: #ffcc00; /* Color al pasar el mouse */
         }
-
         .description {
             padding: 20px;
             text-align: center;
+            font-size: 1.2em; /* Aumentar el tamaño de fuente */
         }
-
         .cta {
             text-align: center; /* Centra el contenido dentro de la sección */
             margin: 20px 0; /* Espaciado superior e inferior */
         }
-
         .cta .button {
-            text-align: center;
             display: inline-block;
             background-color: #ffcc00; /* Botón amarillo */
             color: #1a1a1a; /* Texto del botón oscuro */
             padding: 10px 20px;
             text-decoration: none;
             border-radius: 5px;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, transform 0.3s;
         }
-
         .cta .button:hover {
             background-color: #e6b800; /* Color del botón al pasar el mouse */
+            transform: scale(1.05); /* Efecto de ampliación al pasar el mouse */
         }
-
         .images {
             text-align: center;
             margin: 20px 0;
         }
-
         .images h2 {
             margin: 20px 0;
             text-shadow: 0 0 10px rgba(255, 204, 0, 0.7); /* Sombra de texto */
+            font-size: 1.5em; /* Aumentar el tamaño de la fuente */
         }
-
         .image {
             max-width: 100%;
             height: auto;
             border: 5px solid rgba(255, 204, 0, 0.5); /* Bordes brillantes */
             border-radius: 10px; /* Bordes redondeados */
             transition: border 0.3s;
+            margin: 10px 0; /* Espaciado entre imágenes */
         }
-
         .image:hover {
             border: 5px solid rgba(255, 204, 0, 1); /* Bordes brillantes al pasar el mouse */
         }
-
         footer {
             background-color: #333; /* Fondo del pie de página */
             text-align: center;
@@ -101,6 +93,17 @@
             position: relative;
             bottom: 0;
             width: 100%;
+        }
+        /* Nueva sección de testimonios */
+        .testimonials {
+            background-color: #222; /* Fondo más claro */
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .testimonial {
+            font-style: italic;
+            margin: 10px 0;
         }
     </style>
 </head>
@@ -131,12 +134,19 @@
             <img src="Imagenes/congrispollochicaensalada.jpg" alt="Comidas" class="image">
             <img src="Imagenes/arrozamarillopollochichaensalada.jpg" alt="Comidas" class="image">
         </section>
+        <!-- Nueva sección de testimonios -->
+        <section class="testimonials">
+            <h2>Lo Que Dicen Nuestros Clientes</h2>
+            <p class="testimonial">"La mejor experiencia gastronómica que he tenido. ¡Todo estaba delicioso!" - Ana M.</p>
+            <p class="testimonial">"El ambiente es acogedor y el servicio es excepcional. ¡Volveré!" - Luis R.</p>
+            <p class="testimonial">"Me encantaron las pizzas y los postres. ¡Altamente recomendados!" - Carla T.</p>
+        </section>
     </main>
     <footer>
         <p>&copy; 2025 Paraíso del Sabor. Todos los derechos reservados.</p>
         <p>Para crear tu propia web contacta a: <a href="mailto:helsingrpp2@gmail.com">helsingrpp2@gmail.com</a></p>
         <p>Página Desarrollada por Helsing Raidel Pascual Pérez</p>
-        <p>Teléfono: +53 55015233</p>
+         <p>Contatca al desarrollador</p><a href="tel:+53 55015233" class="icon"><i class="fas fa-phone"></i></a>
     </footer>
 </body>
 </html>
