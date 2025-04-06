@@ -26,12 +26,6 @@
             border-radius: 50%; /* Logo circular */
             box-shadow: 0 0 15px 5px rgba(255, 215, 0, 0.7); /* Sombra amarilla */
         }
-        .social-links a {
-            color: #FFD700; /* Enlaces amarillos */
-            text-decoration: none;
-            margin: 0 10px;
-            font-size: 1em;
-        }
         nav {
             text-align: center;
             margin: 20px 0;
@@ -61,22 +55,20 @@
         section.active {
             display: block;
         }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 20px; /* Espacio entre tablas */
-        }
-        th, td {
-            padding: 10px;
-            text-align: left;
-        }
-        th {
-            background-color: #444; /* Fondo gris oscuro */
-            color: #FFD700; /* Texto amarillo */
-        }
-        td {
+        .producto {
             background-color: #222; /* Fondo más oscuro */
-            color: #e0e0e0; /* Texto claro */
+            border: 1px solid #FFD700; /* Bordes amarillos */
+            border-radius: 10px; /* Bordes redondeados */
+            padding: 15px;
+            margin: 10px;
+            text-align: center;
+            display: inline-block; /* Para que se alineen en fila */
+            width: calc(30% - 40px); /* Ancho ajustado para 3 productos por fila */
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.5); /* Sombra difusa */
+        }
+        .producto img {
+            width: 100%; /* Imagen al 100% del contenedor */
+            border-radius: 10px; /* Bordes redondeados para la imagen */
         }
         footer {
             text-align: center;
@@ -93,7 +85,6 @@
         footer a:hover {
             color: #fff; /* Blanco al pasar el cursor */
         }
-
         /* Animaciones */
         @keyframes fadeIn {
             from {
@@ -103,6 +94,21 @@
             to {
                 opacity: 1;
                 transform: translateY(20px);
+            }
+        }
+        /* Media Queries para Responsividad */
+        @media (max-width: 768px) {
+            .producto {
+                width: calc(45% - 20px); /* Dos productos por fila en pantallas más pequeñas */
+            }
+        }
+        @media (max-width: 480px) {
+            .producto {
+                width: calc(100% - 20px); /* Un producto por fila en móviles */
+            }
+            nav button {
+                padding: 8px 16px; /* Ajuste de tamaño de botones en móviles */
+                font-size: 0.9em; /* Tamaño de fuente más pequeño */
             }
         }
     </style>
@@ -122,60 +128,166 @@
     </nav>
     <section id="entrantes" class="active">
         <h2>Entrantes</h2>
-        <table>
-            <tr><th>Plato</th><th>Precio (CUP)</th></tr>
-            <tr><td>Chicharrita</td><td>250</td></tr>
-            <tr><td>Ensalada mixta</td><td>350</td></tr>
-            <tr><td>Tostones</td><td>400</td></tr>
-            <tr><td>Queso</td><td>400</td></tr>
-            <tr><td>Croquetas buffet</td><td>450</td></tr>
-            <tr><td>Papas fritas</td><td>500</td></tr>
-            <tr><td>Salchicha</td><td>500</td></tr>
-            <tr><td>Jamón</td><td>600</td></tr>
-            <tr><td>Ensalada fría</td><td>400</td></tr>
-            <tr><td>Titanic</td><td>1300</td></tr>
-            <tr><td>Pollo frito entero con Chicharrita</td><td>1200</td></tr>
-            <tr><td>Pollo frito entero con papas fritas</td><td>1300</td></tr>
-        </table>
+        <div class="producto">
+            <img src="ruta/a/la/imagen/chicharrita.jpg" alt="Chicharrita">
+            <h3>Chicharrita</h3>
+            <p>Precio: 250 CUP</p>
+        </div>
+        <div class="producto">
+            <img src="ruta/a/la/imagen/ensalada-mixta.jpg" alt="Ensalada mixta">
+            <h3>Ensalada mixta</h3>
+            <p>Precio: 350 CUP</p>
+        </div>
+        <div class="producto">
+            <img src="ruta/a/la/imagen/tostones.jpg" alt="Tostones">
+            <h3>Tostones</h3>
+            <p>Precio: 400 CUP</p>
+        </div>
+        <div class="producto">
+            <img src="ruta/a/la/imagen/queso.jpg" alt="Queso">
+            <h3>Queso</h3>
+            <p>Precio: 400 CUP</p>
+        </div>
+        <div class="producto">
+            <img src="ruta/a/la/imagen/croquetas.jpg" alt="Croquetas buffet">
+            <h3>Croquetas buffet</h3>
+            <p>Precio: 450 CUP</p>
+        </div>
+        <div class="producto">
+            <img src="ruta/a/la/imagen/papas-fritas.jpg" alt="Papas fritas">
+            <h3>Papas fritas</h3>
+            <p>Precio: 500 CUP</p>
+        </div>
+        <div class="producto">
+            <img src="ruta/a/la/imagen/salchicha.jpg" alt="Salchicha">
+            <h3>Salchicha</h3>
+            <p>Precio: 500 CUP</p>
+        </div>
+        <div class="producto">
+            <img src="ruta/a/la/imagen/jamon.jpg" alt="Jamón">
+            <h3>Jamón</h3>
+            <p>Precio: 600 CUP</p>
+        </div>
+        <div class="producto">
+            <img src="ruta/a/la/imagen/ensalada-fria.jpg" alt="Ensalada fría">
+            <h3>Ensalada fría</h3>
+            <p>Precio: 400 CUP</p>
+        </div>
+        <div class="producto">
+            <img src="ruta/a/la/imagen/titanic.jpg" alt="Titanic">
+            <h3>Titanic</h3>
+            <p>Precio: 1300 CUP</p>
+        </div>
+        <div class="producto">
+            <img src="ruta/a/la/imagen/pollo-frito-chicharrita.jpg" alt="Pollo frito entero con Chicharrita">
+            <h3>Pollo frito entero con Chicharrita</h3>
+            <p>Precio: 1200 CUP</p>
+        </div>
+        <div class="producto">
+            <img src="ruta/a/la/imagen/pollo-frito-papas.jpg" alt="Pollo frito entero con papas fritas">
+            <h3>Pollo frito entero con papas fritas</h3>
+            <p>Precio: 1300 CUP</p>
+        </div>
     </section>
     <section id="pizzas">
-        <h2>Pizzas de Queso Gouda 450 (CUP)</h2>
-        <table>
-            <tr><th>Tipo</th><th>Precio (CUP)</th></tr>
-            <tr><td>Ají</td><td>125</td></tr>
-            <tr><td>Cebolla</td><td>125</td></tr>
-            <tr><td>Jamón</td><td>150</td></tr>
-            <tr><td>Salchicha</td><td>150</td></tr>
-            <tr><td>Chorizo</td><td>150</td></tr>
-            <tr><td>Beicon</td><td>350</td></tr>
-            <tr><td>Atún</td><td>350</td></tr>
-        </table>
+        <h2>Pizzas de Queso Gouda</h2>
+        <div class="producto">
+            <img src="ruta/a/la/imagen/aji.jpg" alt="Pizza de Ají">
+            <h3>Ají</h3>
+            <p>Precio: 125 CUP</p>
+        </div>
+        <div class="producto">
+            <img src="ruta/a/la/imagen/cebolla.jpg" alt="Pizza de Cebolla">
+            <h3>Cebolla</h3>
+            <p>Precio: 125 CUP</p>
+        </div>
+        <div class="producto">
+            <img src="ruta/a/la/imagen/jamon.jpg" alt="Pizza de Jamón">
+            <h3>Jamón</h3>
+            <p>Precio: 150 CUP</p>
+        </div>
+        <div class="producto">
+            <img src="ruta/a/la/imagen/salchicha.jpg" alt="Pizza de Salchicha">
+            <h3>Salchicha</h3>
+            <p>Precio: 150 CUP</p>
+        </div>
+        <div class="producto">
+            <img src="ruta/a/la/imagen/chorizo.jpg" alt="Pizza de Chorizo">
+            <h3>Chorizo</h3>
+            <p>Precio: 150 CUP</p>
+        </div>
+        <div class="producto">
+            <img src="ruta/a/la/imagen/beicon.jpg" alt="Pizza de Beicon">
+            <h3>Beicon</h3>
+            <p>Precio: 350 CUP</p>
+        </div>
+        <div class="producto">
+            <img src="ruta/a/la/imagen/atun.jpg" alt="Pizza de Atún">
+            <h3>Atún</h3>
+            <p>Precio: 350 CUP</p>
+        </div>
     </section>
     <section id="comidas">
         <h2>Comidas</h2>
-        <table>
-            <tr><th>Tipo</th><th>Agregados</th><th>Precio (CUP)</th></tr>
-            <tr><td>Congris o Amarillo con carne</td><td>Pollo frito, ensalada y chicharrita</td><td>1600</td></tr>
-            <tr><td>Congris o Amarillo con carne</td><td>Bistec de pollo, ensalada y chicharrita</td><td>1600</td></tr>
-            <tr><td>Congris o Amarillo con carne</td><td>Lomo ahumado, ensalada y chicharrita</td><td>1700</td></tr>
-            <tr><td>Congris o Amarillo con carne</td><td>Estofado de res, ensalada y chicharrita</td><td>1800</td></tr>
-            <tr><td>Congris o Amarillo con carne</td><td>Masa frita</td><td>1800</td></tr>
-            <tr><td>Congris o Amarillo con carne</td><td>Bistec de cerdo asado</td><td>1600</td></tr>
-        </table>
+        <div class="producto">
+            <img src="ruta/a/la/imagen/congris.jpg" alt="Congris o Amarillo con carne">
+            <h3>Congris o Amarillo con carne</h3>
+            <p>Agregados: Pollo frito, ensalada y chicharrita</p>
+            <p>Precio: 1600 CUP</p>
+        </div>
+        <div class="producto">
+            <img src="ruta/a/la/imagen/bistec-pollo.jpg" alt="Congris o Amarillo con carne">
+            <h3>Congris o Amarillo con carne</h3>
+            <p>Agregados: Bistec de pollo, ensalada y chicharrita</p>
+            <p>Precio: 1600 CUP</p>
+        </div>
+        <div class="producto">
+            <img src="ruta/a/la/imagen/lomo-ahumado.jpg" alt="Congris o Amarillo con carne">
+            <h3>Congris o Amarillo con carne</h3>
+            <p>Agregados: Lomo ahumado, ensalada y chicharrita</p>
+            <p>Precio: 1700 CUP</p>
+        </div>
+        <div class="producto">
+            <img src="ruta/a/la/imagen/estofado.jpg" alt="Congris o Amarillo con carne">
+            <h3>Congris o Amarillo con carne</h3>
+            <p>Agregados: Estofado de res, ensalada y chicharrita</p>
+            <p>Precio: 1800 CUP</p>
+        </div>
+        <div class="producto">
+            <img src="ruta/a/la/imagen/masa-frita.jpg" alt="Congris o Amarillo con carne">
+            <h3>Congris o Amarillo con carne</h3>
+            <p>Agregados: Masa frita</p>
+            <p>Precio: 1800 CUP</p>
+        </div>
+        <div class="producto">
+            <img src="ruta/a/la/imagen/bistec-cerdo.jpg" alt="Congris o Amarillo con carne">
+            <h3>Congris o Amarillo con carne</h3>
+            <p>Agregados: Bistec de cerdo asado</p>
+            <p>Precio: 1600 CUP</p>
+        </div>
     </section>
     <section id="bebidas">
         <h2>Bebidas</h2>
-        <table>
-            <tr><th>Bebida</th><th>Precio (CUP)</th></tr>
-            <tr><td>Agua</td><td>120</td></tr>
-            <tr><td>Jugo</td><td>180</td></tr>
-            <tr><td>Refresco de lata</td><td>200</td></tr>
-        </table>
+        <div class="producto">
+            <img src="ruta/a/la/imagen/agua.jpg" alt="Agua">
+            <h3>Agua</h3>
+            <p>Precio: 120 CUP</p>
+        </div>
+        <div class="producto">
+            <img src="ruta/a/la/imagen/jugo.jpg" alt="Jugo">
+            <h3>Jugo</h3>
+            <p>Precio: 180 CUP</p>
+        </div>
+        <div class="producto">
+            <img src="ruta/a/la/imagen/refresco.jpg" alt="Refresco de lata">
+            <h3>Refresco de lata</h3>
+            <p>Precio: 200 CUP</p>
+        </div>
     </section>
     <footer>
         <p>&copy; 2025 Restaurante. Todos los derechos reservados.</p>
         <p>Para crear tu propia web contacta a: <a href="mailto:helsingrpp2@gmail.com">helsingrpp2@gmail.com</a></p>
-        <p>Página Desarollada por Helsing Raidel Pascual Pérez</p>
+        <p>Página Desarrollada por Helsing Raidel Pascual Pérez</p>
         <p>Teléfono: +53 55015233</p>
     </footer>
     <script>
