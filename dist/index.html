@@ -6,6 +6,103 @@
     <title>Paraíso del Sabor</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Estilos CSS para centrar y ajustar el contenido */
+        body {
+    background-color: #1a1a1a; /* Fondo oscuro */
+    color: white; /* Texto blanco */
+    font-family: 'Arial', sans-serif; /* Fuente moderna */
+    margin: 0;
+    padding: 0;
+        }
+
+        header {
+    background-color: #333; /* Fondo del encabezado */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .logo {
+            width: 150px; /* Ajusta el tamaño del logo según sea necesario */
+            height: 150px; /* Asegúrate de que el logo sea cuadrado */
+            border-radius: 50%; /* Hace que el logo sea circular */
+            border: 5px solid rgba(255, 204, 0, 0.5); /* Borde amarillo difuminado */
+            box-shadow: 0 0 20px rgba(255, 204, 0, 0.7); /* Sombra difusa amarilla */
+            transition: border 0.3s, box-shadow 0.3s; /* Transiciones suaves */
+        }
+
+        .logo:hover {
+            border: 5px solid rgba(255, 204, 0, 1); /* Borde brillante al pasar el mouse */
+            box-shadow: 0 0 30px rgba(255, 204, 0, 1); /* Sombra más intensa al pasar el mouse */
+        }
+
+        .social-icons a {
+            color: white; /* Iconos en blanco */
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #ffcc00; /* Color al pasar el mouse */
+        }
+
+        .description {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .cta {
+            text-align: center; /* Centra el contenido dentro de la sección */
+            margin: 20px 0; /* Espaciado superior e inferior */
+        }
+
+        .cta .button {
+            text-align: center;
+            display: inline-block;
+            background-color: #ffcc00; /* Botón amarillo */
+            color: #1a1a1a; /* Texto del botón oscuro */
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .cta .button:hover {
+            background-color: #e6b800; /* Color del botón al pasar el mouse */
+        }
+
+        .images {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .images h2 {
+            margin: 20px 0;
+            text-shadow: 0 0 10px rgba(255, 204, 0, 0.7); /* Sombra de texto */
+        }
+
+        .image {
+            max-width: 100%;
+            height: auto;
+            border: 5px solid rgba(255, 204, 0, 0.5); /* Bordes brillantes */
+            border-radius: 10px; /* Bordes redondeados */
+            transition: border 0.3s;
+        }
+
+        .image:hover {
+            border: 5px solid rgba(255, 204, 0, 1); /* Bordes brillantes al pasar el mouse */
+        }
+
+        footer {
+            background-color: #333; /* Fondo del pie de página */
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -18,16 +115,13 @@
             <a href="mailto:paraísodelsaborcafereria@gmail.com"><i class="fas fa-envelope"></i></a>
         </div>
     </header>
-    
     <main>
         <section class="description">
             <p>👨🏻‍🍳🍽️ En Cafetería Paraíso del Sabor, te invitamos a disfrutar de una experiencia culinaria única donde la tradición cubana se encuentra con la creatividad. Desde nuestros deliciosos entremeses hasta nuestras irresistibles pizzas y pastas, cada plato está preparado con amor y los mejores ingredientes. No olvides dejar espacio para nuestros postres caseros y refrescantes bebidas que complementarán tu comida. 🖤🩶🤍 ¡Ven y descubre el sabor del paraíso! 🌴✨</p>
         </section>
-
         <section class="cta">
             <a href="https://helsing22.github.io/Men-/src/index.html" class="button">Ver Menú</a>
         </section>
-
         <section class="images">
             <h2>Nuestras Bebidas</h2>
             <img src="IMG_20250404_121137.jpg" alt="Bebidas" class="image">
@@ -38,11 +132,10 @@
             <img src="IMG_20250404_121207.jpg" alt="Comidas" class="image">
         </section>
     </main>
-
     <footer>
         <p>&copy; 2025 Paraíso del Sabor. Todos los derechos reservados.</p>
         <p>Para crear tu propia web contacta a: <a href="mailto:helsingrpp2@gmail.com">helsingrpp2@gmail.com</a></p>
-        <p>Página Desarollada por Helsing Raidel Pascual Pérez</p>
+        <p>Página Desarrollada por Helsing Raidel Pascual Pérez</p>
         <p>Teléfono: +53 55015233</p>
     </footer>
 </body>
