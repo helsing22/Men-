@@ -1,152 +1,206 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paraíso del Sabor</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        /* Estilos CSS para centrar y ajustar el contenido */
-        body {
-            background-image: url('Imagenes/copilot.jpg'); /* Cambia la ruta a tu imagen */
-            background-repeat: repeat; /* Repite la imagen */
-            background-size: 50%; /* Ajusta el tamaño de la imagen para que se repita 7 veces en el eje X y Y */
-            color: white; /* Texto blanco */
-            font-family: 'Arial', sans-serif; /* Fuente moderna */
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center; /* Centrar el contenido horizontalmente */
-            text-align: center; /* Centrar el texto */
-        }
-        header {
-            background-color: rgba(68, 68, 68, 1); /* Fondo del encabezado con opacidad */
-            padding: 20px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-        }
-        .logo {
-            width: 150px; /* Ajusta el tamaño del logo según sea necesario */
-            height: 150px; /* Asegúrate de que el logo sea cuadrado */
-            border-radius: 50%; /* Hace que el logo sea circular */
-            border: 5px solid rgba(255, 204, 0, 0.5); /* Borde amarillo difuminado */
-            box-shadow: 0 0 20px rgba(255, 204, 0, 0.7); /* Sombra difusa amarilla */
-            transition: border 0.3s, box-shadow 0.3s; /* Transiciones suaves */
-        }
-        .logo:hover {
-            border: 5px solid rgba(255, 204, 0, 1); /* Borde brillante al pasar el mouse */
-            box-shadow: 0 0 30px rgba(255, 204, 0, 1); /* Sombra más intensa al pasar el mouse */
-        }
-        .social-icons a {
-            color: white; /* Iconos en blanco */
-            margin: 0 10px;
-            transition: color 0.3s;
-        }
-        .social-icons a:hover {
-            color: #ffcc00; /* Color al pasar el mouse */
-        }
-        .description {
-            padding: 20px;
-            background-color: rgba(68, 68, 68, 0.7);
-            color: white;
-            text-shadow: 0 0 10px rgba(255, 204, 0, 1); /* Sombra de texto */
-            text-align: center;
-            font-size: 1.2em; /* Aumentar el tamaño de fuente */
-        }
-        .cta {
-            text-align: center; /* Centra el contenido dentro de la sección */
-            margin: 20px 0; /* Espaciado superior e inferior */
-        }
-        .cta .button {
-            display: inline-block;
-            background-color: #ffcc00; /* Botón amarillo */
-            color: #1a1a1a; /* Texto del botón oscuro */
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s, transform 0.3s;
-        }
-        .cta .button:hover {
-            background-color: #e6b800; /* Color del botón al pasar el mouse */
-            transform: scale(1.05); /* Efecto de ampliación al pasar el mouse */
-        }
-        .images {
-            text-align: center;
-            margin: 20px 0;
-        }
-        .images h2 {
-            margin: 20px 0;
-            text-shadow: 0 0 10px rgba(255, 204, 0, 0.7); /* Sombra de texto */
-            font-size: 1.5em; /* Aumentar el tamaño de la fuente */
-        }
-        .image {
-            max-width: 100%;
-            height: auto;
-            border: 5px solid rgba(255, 204, 0, 0.5); /* Bordes brillantes */
-            border-radius: 10px; /* Bordes redondeados */
-            transition: border 0.3s;
-            margin: 10px 0; /* Espaciado entre imágenes */
-        }
-        .image:hover {
-            border: 5px solid rgba(255, 204, 0, 1); /* Bordes brillantes al pasar el mouse */
-        }
-        footer {
-            background-color: rgba(51, 51, 51, 1); /* Fondo del pie de página con opacidad */
-            text-align: center;
-            padding: 10px;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-        }
-        /* Nueva sección de testimonios */
-        .testimonials {
-            background-color: #222; /* Fondo más claro */
-            padding: 20px;
-            border-radius: 10px;
-            margin: 20px 0;
-        }
-        .testimonial {
-            font-style: italic;
-            margin: 10px 0;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paraíso del Sabor</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* Estilos CSS para centrar y ajustar el contenido */
+    body {
+      background-color: rgba(68, 68, 68, 0.7);
+      background-image: url('Imagenes/copilot.jpg');
+      /* Cambia la ruta a tu imagen */
+      background-repeat: repeat;
+      /* Repite la imagen */
+      background-size: 50%;
+      /* Ajusta el tamaño de la imagen para que se repita 7 veces en el eje X y Y */
+      color: white;
+      /* Texto blanco */
+      font-family: 'Arial', sans-serif;
+      /* Fuente moderna */
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* Centrar el contenido horizontalmente */
+      text-align: center;
+      /* Centrar el texto */
+    }
+
+    header {
+      background-color: rgba(68, 68, 68, 1);
+      /* Fondo del encabezado con opacidad */
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .logo {
+      width: 150px;
+      /* Ajusta el tamaño del logo según sea necesario */
+      height: 150px;
+      /* Asegúrate de que el logo sea cuadrado */
+      border-radius: 50%;
+      /* Hace que el logo sea circular */
+      border: 5px solid rgba(255, 204, 0, 0.5);
+      /* Borde amarillo difuminado */
+      box-shadow: 0 0 20px rgba(255, 204, 0, 0.7);
+      /* Sombra difusa amarilla */
+      transition: border 0.3s, box-shadow 0.3s;
+      /* Transiciones suaves */
+    }
+
+    .logo:hover {
+      border: 5px solid rgba(255, 204, 0, 1);
+      /* Borde brillante al pasar el mouse */
+      box-shadow: 0 0 30px rgba(255, 204, 0, 1);
+      /* Sombra más intensa al pasar el mouse */
+    }
+
+    .social-icons a {
+      color: white;
+      /* Iconos en blanco */
+      margin: 0 10px;
+      transition: color 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #ffcc00;
+      /* Color al pasar el mouse */
+    }
+
+    .description {
+      padding: 20px;
+      background-color: rgba(68, 68, 68, 0.7);
+      color: white;
+      text-shadow: 0 0 10px rgba(255, 204, 0, 1);
+      /* Sombra de texto */
+      text-align: center;
+      font-size: 1.2em;
+      /* Aumentar el tamaño de fuente */
+    }
+
+    .cta {
+      text-align: center;
+      /* Centra el contenido dentro de la sección */
+      margin: 20px 0;
+      /* Espaciado superior e inferior */
+    }
+
+    .cta .button {
+      display: inline-block;
+      background-color: #ffcc00;
+      /* Botón amarillo */
+      color: #1a1a1a;
+      /* Texto del botón oscuro */
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .cta .button:hover {
+      background-color: #e6b800;
+      /* Color del botón al pasar el mouse */
+      transform: scale(1.05);
+      /* Efecto de ampliación al pasar el mouse */
+    }
+
+    .images {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .images h2 {
+      margin: 20px 0;
+      text-shadow: 0 0 10px rgba(255, 204, 0, 0.7);
+      /* Sombra de texto */
+      font-size: 1.5em;
+      /* Aumentar el tamaño de la fuente */
+    }
+
+    .image {
+      max-width: 100%;
+      height: auto;
+      border: 5px solid rgba(255, 204, 0, 0.5);
+      /* Bordes brillantes */
+      border-radius: 10px;
+      /* Bordes redondeados */
+      transition: border 0.3s;
+      margin: 10px 0;
+      /* Espaciado entre imágenes */
+    }
+
+    .image:hover {
+      border: 5px solid rgba(255, 204, 0, 1);
+      /* Bordes brillantes al pasar el mouse */
+    }
+
+    footer {
+      background-color: rgba(51, 51, 51, 1);
+      /* Fondo del pie de página con opacidad */
+      text-align: center;
+      padding: 10px;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+
+    /* Nueva sección de testimonios */
+    .testimonials {
+      background-color: #222;
+      /* Fondo más claro */
+      padding: 20px;
+      border-radius: 10px;
+      margin: 20px 0;
+    }
+
+    .testimonial {
+      font-style: italic;
+      margin: 10px 0;
+    }
+  </style>
 </head>
+
 <body>
-    <header>
-        <img src="IMG-20250320-WA0044(2).jpg" alt="Logotipo de Paraíso del Sabor" class="logo"> <!-- Asegúrate de tener un logo -->
-        <h1>Bienvenido a Cafetería Paraíso del Sabor</h1>
-        <div class="social-icons">
-            <a href="https://www.instagram.com/cafeteria_paraiso_del_sabor?igsh=MW50eXRuZWd4cG5qcA%3D%3D&utm_source=qr" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.facebook.com/share/18fGdx9JRa/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="tel:+53 53782815" class="icon"><i class="fas fa-phone"></i></a> <!-- Cambia el número de teléfono -->
-            <a href="mailto:paraísodelsaborcafereria@gmail.com"><i class="fas fa-envelope"></i></a>
-        </div>
-    </header>
-    <main>
-        <section class="description">
-            <p>👨🏻‍🍳🍽️ En Cafetería Paraíso del Sabor, te invitamos a disfrutar de una experiencia culinaria única donde la tradición cubana se encuentra con la creatividad. Desde nuestros deliciosos entremeses hasta nuestras irresistibles pizzas y pastas, cada plato está preparado con amor y los mejores ingredientes. No olvides dejar espacio para nuestros postres caseros y refrescantes bebidas que complementarán tu comida. 🖤🩶🤍 ¡Ven y descubre el sabor del paraíso! 🌴✨</p>
-        </section>
-        <section class="cta">
-            <a href="https://helsing22.github.io/Men-/src/index.html" class="button">Ver Menú</a>
-        </section>
-        <section class="images">
-            <h2>El Local</h2>
-            <img src="local.jpg" alt="Local" class="image">
-        </section>
-        <!-- Nueva sección de testimonios -->
-        <section class="testimonials">
-            <h2>Lo Que Dicen Nuestros Clientes</h2>
-            <p class="testimonial">"La mejor experiencia gastronómica que he tenido. ¡Todo estaba delicioso!" - Ana M.</p>
-            <p class="testimonial">"El ambiente es acogedor y el servicio es excepcional. ¡Volveré!" - Luis R.</p>
-            <p class="testimonial">"Me encantaron las pizzas y los postres. ¡Altamente recomendados!" - Carla T.</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 Paraíso del Sabor. Todos los derechos reservados.</p>
-        <p>Para crear tu propia web contacta a: <a href="mailto:helsingrpp2@gmail.com">helsingrpp2@gmail.com</a></p>
-        <p>Página Desarrollada por Helsing Raidel Pascual Pérez</p>
-        <p>Contacta al desarrollador</p><a href="tel:+53 55015233" class="icon"><i class="fas fa-phone"></i></a>
-    </footer>
+  <header>
+    <img src="IMG-20250320-WA0044(2).jpg" alt="Logotipo de Paraíso del Sabor" class="logo"> <!-- Asegúrate de tener un logo -->
+    <h1>Bienvenido a Cafetería Paraíso del Sabor</h1>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/cafeteria_paraiso_del_sabor?igsh=MW50eXRuZWd4cG5qcA%3D%3D&utm_source=qr" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/share/18fGdx9JRa/?mibextid=wwXIfr" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="tel:+53 53782815" class="icon"><i class="fas fa-phone"></i></a> <!-- Cambia el número de teléfono -->
+      <a href="mailto:paraísodelsaborcafereria@gmail.com"><i class="fas fa-envelope"></i></a>
+    </div>
+  </header>
+  <main>
+    <section class="description">
+      <p>👨🏻‍🍳🍽️ En Cafetería Paraíso del Sabor, te invitamos a disfrutar de una experiencia culinaria única donde la tradición cubana se encuentra con la creatividad. Desde nuestros deliciosos entremeses hasta nuestras irresistibles pizzas y pastas, cada plato está preparado con amor y los mejores ingredientes. No olvides dejar espacio para nuestros postres caseros y refrescantes bebidas que complementarán tu comida. 🖤🩶🤍 ¡Ven y descubre el sabor del paraíso! 🌴✨</p>
+    </section>
+    <section class="cta">
+      <a href="https://helsing22.github.io/Men-/src/index.html" class="button">Ver Menú</a>
+    </section>
+    <section class="images">
+      <h2>El Local</h2>
+      <img src="local.jpg" alt="Local" class="image">
+    </section>
+    <!-- Nueva sección de testimonios -->
+    <section class="testimonials">
+      <h2>Lo Que Dicen Nuestros Clientes</h2>
+      <p class="testimonial">"La mejor experiencia gastronómica que he tenido. ¡Todo estaba delicioso!" - Ana M.</p>
+      <p class="testimonial">"El ambiente es acogedor y el servicio es excepcional. ¡Volveré!" - Luis R.</p>
+      <p class="testimonial">"Me encantaron las pizzas y los postres. ¡Altamente recomendados!" - Carla T.</p>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Paraíso del Sabor. Todos los derechos reservados.</p>
+    <p>Para crear tu propia web contacta a: <a href="mailto:helsingrpp2@gmail.com">helsingrpp2@gmail.com</a></p>
+    <p>Página Desarrollada por Helsing Raidel Pascual Pérez</p>
+    <p>Contacta al desarrollador</p><a href="tel:+53 55015233" class="icon"><i class="fas fa-phone"></i></a>
+  </footer>
 </body>
+
 </html>
