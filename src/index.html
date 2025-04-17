@@ -2,95 +2,105 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Menú del Restaurante</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Roboto', sans-serif;
-            background-image: url('dist/Imagenes/copilot.jpg'); /* Cambia la ruta a tu imagen */
-            background-repeat: repeat; /* Repite la imagen */
+            background-image: url('dist/Imagenes/copilot.jpg');
+            background-repeat: repeat;
             background-color: rgba(68, 68, 68, 0.8);
-            color: #bbbbbb; /* Texto oscuro */
+            color: #bbbbbb;
             margin: 0;
             padding: 0;
+            overflow-x: hidden; /* Evita el desplazamiento horizontal */
         }
-        header {
+
+        header, footer {
+            width: 100%; /* Ocupa todo el ancho */
             text-align: center;
             padding: 20px;
-            background-color: #1b1b1b; /* Fondo amarillo */
-            border-bottom: 5px solid #fbff00; /* Línea decorativa oscura */
-            animation: fadeIn 1s ease-in-out;
+            background-color: #1b1b1b;
+            color: #FFD700;
+            border-bottom: 5px solid #fbff00; /* Línea decorativa */
         }
+
         .logo img {
-            width: 150px;
+            width: 100px; /* Ajusta el tamaño del logo */
             height: auto;
-            border-radius: 50%; /* Logo circular */
-            box-shadow: 0 0 15px 5px rgba(255, 191, 0, 0.3); /* Sombra */
+            border-radius: 50%;
+            box-shadow: 0 0 15px 5px rgba(255, 191, 0, 0.3);
         }
+
         nav {
             text-align: center;
-            margin: 20px 0;
+            margin: 10px 0;
         }
+
         nav button {
-            background-color: #333; /* Botones oscuros */
-            color: #FFD700; /* Texto amarillo */
-            padding: 10px 20px;
+            background-color: #333;
+            color: #FFD700;
+            padding: 10px 15px;
             border: none;
             margin: 5px;
             cursor: pointer;
-            font-size: 1em;
-            border-radius: 20px; /* Bordes circulares */
+            font-size: 0.9em; /* Tamaño de fuente más pequeño */
+            border-radius: 20px;
             transition: transform 0.3s ease, background-color 0.3s ease;
         }
+
         nav button:hover {
-            background-color: #FFD700; /* Amarillo al pasar el cursor */
+            background-color: #FFD700;
             color: #333;
-            transform: scale(1.1); /* Efecto de ampliación */
+            transform: scale(1.1);
         }
+
         section {
             display: none;
-            padding: 20px;
-            animation: fadeIn 1s ease-in-out; /* Animación al aparecer */
+            padding: 10px;
+            animation: fadeIn 1s ease-in-out;
         }
+
         section.active {
             display: block;
         }
+
         .producto {
-            background-color: #2c2b2b; /* Fondo blanco */
-            border: 1px solid #FFD700; /* Bordes amarillos */
-            border-radius: 10px; /* Bordes redondeados */
-            padding: 15px;
-            margin: 10px;
+            background-color: #2c2b2b;
+            border: 1px solid #FFD700;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 5px;
             text-align: center;
-            display: inline-block; /* Para que se alineen en fila */
-            width: calc(30% - 40px); /* Ancho ajustado para 3 productos por fila */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
-            transition: transform 0.3s ease; /* Efecto al pasar el cursor */
+            display: inline-block;
+            width: calc(100% - 20px); /* Un producto por fila */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
         }
+
         .producto:hover {
-            transform: scale(1.05); /* Ampliación al pasar el cursor */
+            transform: scale(1.05);
         }
+
         .producto img {
-            width: 100%; /* Imagen al 100% del contenedor */
-            border-radius: 10px; /* Bordes redondeados para la imagen */
+            width: 100%;
+            border-radius: 10px;
         }
+
         footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #333; /* Fondo oscuro */
-            color: #FFD700; /* Texto amarillo */
             font-size: 0.8em;
-            animation: fadeIn 1s ease-in-out;
         }
+
         footer a {
-            color: #FFD700; /* Amarillo */
+            color: #FFD700;
             text-decoration: none;
         }
+
         footer a:hover {
-            color: #ffffff; /* Blanco al pasar el cursor */
+            color: #ffffff;
         }
-        /* Animaciones */
+
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -101,19 +111,12 @@
                 transform: translateY(0);
             }
         }
+
         /* Media Queries para Responsividad */
-        @media (max-width: 768px) {
-            .producto {
-                width: calc(45% - 20px); /* Dos productos por fila en pantallas más pequeñas */
-            }
-        }
         @media (max-width: 480px) {
-            .producto {
-                width: calc(100% - 20px); /* Un producto por fila en móviles */
-            }
             nav button {
-                padding: 8px 16px; /* Ajuste de tamaño de botones en móviles */
-                font-size: 0.9em; /* Tamaño de fuente más pequeño */
+                padding: 8px 12px; /* Ajuste de tamaño de botones en móviles */
+                font-size: 0.8em; /* Tamaño de fuente más pequeño */
             }
         }
     </style>
@@ -129,7 +132,7 @@
     <nav>
         <button onclick="showSection('entrantes')">Entrantes</button>
         <button onclick="showSection('pizzas')">Pizzas</button>
-        <button onclick="showSection('pastas')">Pastas</button>
+        <button onclick="showSection('pastas')">Pastas </button>
         <button onclick="showSection('comidas')">Comidas</button>
         <button onclick="showSection('postres')">Postres</button>
         <button onclick="showSection('bebidas')">Bebidas</button>
@@ -160,7 +163,7 @@
             <p>Precio: 450 CUP</p>
             <p>Deliciosas croquetas, ¡una explosión de sabor!</p>
         </div>
-         <div class="producto">
+        <div class="producto">
             <img src="ruta/a/la/imagen/queso.jpg" alt="Queso">
             <h3>Queso</h3>
             <p>Precio: 400 CUP</p>
@@ -209,7 +212,7 @@
             <p>Un plato abundante que satisface todos los antojos.</p>
         </div>
         <div class="producto">
-            <img src="ruta/a/la/imagen/pollo-frito-papas.jpg" alt="Pollo frito entero con papas fritas">
+            <img src="ruta/a/la/imagen/pollo-frito-papas .jpg" alt="Pollo frito entero con papas fritas">
             <h3>Pollo frito entero con papas fritas</h3>
             <p>Precio: 1300 CUP</p>
             <p>La combinación perfecta de pollo y papas fritas.</p>
@@ -262,38 +265,37 @@
         </div>
     </section>
     <section id="pastas">
-    <h2>Espaguetis y Agregados (precio completo):</h2>
-    <div class="producto">
-        <img src="ruta/a/la/imagen/queso.jpg" alt="Espagueti con Queso">
-        <h3>Queso</h3>
-        <p>Precio: 450 CUP</p>
-        <p>Delicioso espagueti con queso fundido, una opción clásica.</p>
-    </div>
-    <div class="producto">
-        <img src="ruta/a/la/imagen/jamon.jpg" alt="Espagueti con Jamón">
-        <h3>Jamón</h3>
-        <p>Precio: 700 CUP</p>
-        <p>Espagueti acompañado de jamón, un sabor irresistible.</p>
-    </div>
-    <div class="producto">
-        <img src="ruta/a/la/imagen/salchichas.jpg" alt="Espagueti con Salchichas">
-        <h3>Salchichas</h3>
-        <p>Precio: 700 CUP</p>
-        <p>Espagueti con salchichas, perfecto para los amantes de la carne.</p>
-    </div>
-    <div class="producto">
-        <img src="ruta/a/la/imagen/mixto.jpg" alt="Espagueti Mixto">
-        <h3>Mixto</h3>
-        <p>Precio: 1000 CUP</p>
-        <p>Una mezcla de sabores con queso, jamón y salchichas.</p>
-    </div>
+        <h2>Espaguetis y Agregados (precio completo):</h2>
+        <div class="producto">
+            <img src="ruta/a/la/imagen/queso.jpg" alt="Espagueti con Queso">
+            <h3>Queso</h3>
+            <p>Precio: 450 CUP</p>
+            <p>Delicioso espagueti con queso fundido, una opción clásica.</p>
+        </div>
+        <div class="producto">
+            <img src="ruta/a/la/imagen/jamon.jpg" alt="Espagueti con Jamón">
+            <h3>Jamón</h3>
+            <p>Precio: 700 CUP</p>
+            <p>Espagueti acompañado de jamón, un sabor irresistible.</p>
+        </div>
+        <div class="producto">
+            <img src="ruta/a/la/imagen/salchichas.jpg" alt="Espagueti con Salchichas">
+            <h3>Salchichas</h3>
+            <p>Precio: 700 CUP</p>
+            <p>Espagueti con salchichas, perfecto para los amantes de la carne.</p>
+        </div>
+        <div class="producto">
+            <img src="ruta/a/la/imagen/mixto.jpg" alt="Espagueti Mixto">
+            <h3>Mixto</h3>
+            <p>Precio: 1000 CUP</p>
+            <p>Una mezcla de sabores con queso, jamón y salchichas.</p>
+        </div>
     </section>
-    
     <section id="comidas">
         <h2>Comidas</h2>
         <h2>Arroz: Amarillo, Moro, Congris</h2>
         <div class="producto">
-            <img src="PolloFrito.jpg" alt="Pollo Frito">
+            <img src="PolloFrito.jpg" alt="Pollo F rito">
             <h3>Pollo frito</h3>
             <p>Agregados: ensalada y chicharrita</p>
             <p>Precio: 1600 CUP</p>
@@ -306,7 +308,7 @@
             <p>Precio: 1600 CUP</p>
             <p>Jugoso y lleno de sabor.</p>
         </div>
-       <div class="producto">
+        <div class="producto">
             <img src="ruta/a/la/imagen/masa-frita.jpg" alt="Masa frita">
             <h3>Masa frita</h3>
             <p>Agregados: Ensalada y chicharrita</p>
@@ -334,9 +336,8 @@
             <p>Precio: 1800 CUP</p>
             <p>Delicioso y reconfortante.</p>
         </div>
-    
     </section>
-<section id="postres">
+    <section id="postres">
         <h2>Postres</h2>
         <div class="producto">
             <img src="ruta/a/la/imagen/refresco.jpg" alt="Refresco de lata">
@@ -344,14 +345,13 @@
             <p>Precio: 400 CUP</p>
             <p>Un clásico refrescante para acompañar tus platos.</p>
         </div>
-    <div class="producto">
+        <div class="producto">
             <img src="ruta/a/la/imagen/refresco.jpg" alt="Refresco de lata">
             <h3>Pastel de chocolate</h3>
             <p>Precio: 250 CUP</p>
             <p>Un clásico refrescante para acompañar tus platos.</p>
         </div>
     </section>
-    
     <section id="bebidas">
         <h2>Bebidas</h2>
         <div class="producto">
@@ -379,8 +379,8 @@
             <p>Un clásico refrescante para acompañar tus platos.</p>
         </div>
         <div class="producto">
-            <img src="ruta/a/la/imagen/refresco.jpg" alt="Refresco de lata">
-            <h3>Bebida energetica</h3>
+            <img src="ruta/a/la/imagen/ref resco.jpg" alt="Refresco de lata">
+            <h3>Bebida energética</h3>
             <p>Precio: 250 CUP</p>
             <p>Un clásico refrescante para acompañar tus platos.</p>
         </div>
@@ -418,4 +418,4 @@
         }
     </script>
 </body>
-</html>
+    </html>
