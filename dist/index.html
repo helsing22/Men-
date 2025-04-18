@@ -27,11 +27,12 @@
       padding: 20px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
       width: 100%;
+      text-align: center;
     }
 
     .logo {
-      width: 100px; /* Tamaño más pequeño */
-      height: 100px; /* Tamaño más pequeño */
+      width: 100px;
+      height: 100px;
       border-radius: 50%;
       border: 3px solid rgba(255, 204, 0, 0.5);
       box-shadow: 0 0 15px rgba(255, 204, 0, 0.7);
@@ -41,6 +42,10 @@
     .logo:hover {
       border: 3px solid rgba(255, 204, 0, 1);
       box-shadow: 0 0 25px rgba(255, 204, 0, 1);
+    }
+
+    .social-icons {
+      margin-top: 10px;
     }
 
     .social-icons a {
@@ -64,6 +69,7 @@
       max-width: 800px;
       margin: 20px auto;
       border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     }
 
     .cta {
@@ -79,6 +85,7 @@
       text-decoration: none;
       border-radius: 5px;
       transition: background-color 0.3s, transform 0.3s;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     }
 
     .cta .button:hover {
@@ -94,6 +101,7 @@
       width: 50%;
       max-width: 800px;
       border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     }
 
     .images h2 {
@@ -102,13 +110,20 @@
       font-size: 1.5em;
     }
 
+    .image-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+
     .image {
-      width: 200px; /* Tamaño más pequeño */
-      height: auto;
+      width: 150px; /* Tamaño más pequeño */
+      height: 150px; /* Tamaño más pequeño */
+      object-fit: cover;
       border: 3px solid rgba(255, 204, 0, 0.5);
       border-radius: 10px;
       transition: border 0.3s, transform 0.3s;
-      margin: 10px;
     }
 
     .image:hover {
@@ -129,6 +144,7 @@
       height: auto;
       border: 3px solid rgba(255, 204, 0, 0.5);
       border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     }
 
     .testimonials {
@@ -138,6 +154,7 @@
       margin: 20px 0;
       width: 90%;
       max-width: 800px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     }
 
     .testimonial {
@@ -148,8 +165,9 @@
     footer {
       background-color: rgba(51, 51, 51, 1);
       text-align: center;
-      padding: 10px;
+      padding: 20px;
       width: 100%;
+      box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5);
     }
 
     footer a {
@@ -183,13 +201,15 @@
     </section>
     <section class="images">
       <h2>El Local</h2>
-      <img src="Imagenes/Primera.jpg" alt="Local" class="image">
-      <img src="Imagenes/Segunda.jpg" alt="Local" class="image">
-      <img src="Imagenes/Tercera.jpg" alt="Local" class="image">
-      <img src="Imagenes/Cuarta.jpg" alt="Local" class="image">
-      <img src="Imagenes/Quinta.jpg" alt="Local" class="image">
-      <img src="Imagenes/Sexta.jpg" alt="Local" class="image">
-      <img src="Imagenes/Septima.jpg" alt="Local" class="image">
+      <div class="image-container">
+        <img src="Imagenes/Primera.jpg" alt="Local" class="image">
+        <img src="Imagenes/Segunda.jpg" alt="Local" class="image">
+        <img src="Imagenes/Tercera.jpg" alt="Local" class="image">
+        <img src="Imagenes/Cuarta.jpg" alt="Local" class="image">
+        <img src="Imagenes/Quinta.jpg" alt="Local" class="image">
+        <img src="Imagenes/Sexta.jpg" alt="Local" class="image">
+        <img src="Imagenes/Septima.jpg" alt="Local" class="image">
+      </div>
     </section>
     <section class="videos">
       <h2>Video</h2>
@@ -209,7 +229,5 @@
     <p>Contacta al desarrollador: <a href="tel:+53 55015233"><i class="fas fa-phone"></i> +53 55015233</a></p>
   </footer>
 </body>
-
-</html>
 
 </html>
